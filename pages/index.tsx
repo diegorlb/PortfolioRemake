@@ -1,8 +1,11 @@
 import { FunctionComponent, } from 'react'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+
 import * as SiIcons from 'react-icons/si'
-import LayoutWrapper from '../components/LayoutWrapper'
-import Typewritter from '../components/Typewritter'
+
+const LayoutWrapper = dynamic(() => import('../components/LayoutWrapper'))
+const Typewritter = dynamic(() => import('../components/Typewritter'))
 
 const Index: FunctionComponent = () => {
   const icons: Array<{ label: string, title: string, icon: keyof typeof SiIcons, link: string }> = [

@@ -1,10 +1,14 @@
 import { FunctionComponent, useCallback, } from 'react'
 import { GetStaticProps, } from 'next'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
+
 import * as SiIcons from 'react-icons/si'
 import { m, } from 'framer-motion'
-import LayoutWrapper from '../components/LayoutWrapper'
+
 import getGithubData, { RepositoryType, } from '../utils/GithubUtils'
+
+const LayoutWrapper = dynamic(() => import('../components/LayoutWrapper'))
 
 type ProjectsProps = {
   projects: Array<RepositoryType>,

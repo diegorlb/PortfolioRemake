@@ -1,8 +1,11 @@
 import { FunctionComponent, } from 'react'
+import dynamic from 'next/dynamic'
+
 import * as SiIcons from 'react-icons/si'
 import { m, } from 'framer-motion'
-import LayoutWrapper from '../components/LayoutWrapper'
-import HoverIcon from '../components/HoverIcon'
+
+const LayoutWrapper = dynamic(() => import('../components/LayoutWrapper'))
+const HoverIcon = dynamic(() => import('../components/HoverIcon'))
 
 const Skills: FunctionComponent = ({ }) => {
   const sections: Array<{
@@ -74,7 +77,7 @@ const Skills: FunctionComponent = ({ }) => {
                   key={badgeIndex}
                   icon={icon}
                   accent={color}
-                  title={title}
+                  title={name}
                   className={'mr-3 last:mr-0 mb-2 hover:bg-slate-800 rounded-md'}
                   custom={[sectionIndex, badgeIndex]}
                   initial={'hidden'}

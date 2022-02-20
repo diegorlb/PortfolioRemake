@@ -14,7 +14,11 @@ const HoverIcon: FunctionComponent<HoverIconProps> = ({ icon, accent, title, ...
   const Icon = useMemo(() => SiIcons[icon], [icon])
 
   return (
-    <m.div {...rest} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    <m.div
+      {...rest}
+      title={title}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}>
       <Icon
         className={'w-8 h-8 m-1 text-slate-100 transition-colors'}
         style={{ ...(hover ? { color: accent, } : {}), }} />

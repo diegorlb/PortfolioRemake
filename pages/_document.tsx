@@ -10,7 +10,6 @@ export default function Document() {
         <meta name={'keywords'} content={'portfolio, javascript, typescript, developer, react, reactjs, nextjs'} />
         <meta name={'author'} content={'Diego Rodríguez'} />
         <meta name={'copyright'} content={'Diego Rodríguez'} />
-        <meta name={'viewport'} content={'width=device-width, initial-scale=1.0'} />
 
         <link rel={'shortcut icon'} href={'/icons/favicon.ico'} type={'image/x-icon'} />
 
