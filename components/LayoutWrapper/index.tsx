@@ -1,6 +1,7 @@
 import { FunctionComponent, } from 'react'
 import Head from 'next/head'
 import Navbar from '../Navbar'
+import { m } from 'framer-motion'
 
 type LayoutWrapperProps = {
   title: string,
@@ -8,16 +9,25 @@ type LayoutWrapperProps = {
 
 const LayoutWrapper: FunctionComponent<LayoutWrapperProps> = ({ title, children, }) => {
   return (
-    <div className={'w-screen h-screen flex flex-col overflow-hidden'}>
+    <div className={'w-screen bg-primary h-screen flex flex-col overflow-hidden'}>
       <Head>
         <title key={'title'}>{title} | Diego Rodríguez</title>
       </Head>
 
       <Navbar />
 
-      <main className={'bg-primary flex-1 flex justify-center items-center'}>
+      <m.main className={'bg-primary flex-1 flex justify-center items-center'}
+        variants={{
+          hidden: { opacity: 0, x: -200, },
+          enter: { opacity: 1, x: 0, },
+          exit: { opacity: 0, x: 200, },
+        }}
+        initial={'hidden'}
+        animate={'enter'}
+        exit={'exit'}
+        transition={{ easings: 'linear', }}>
         {children}
-      </main>
+      </m.main>
 
       <footer className={'bg-secondary'}>
         <div className={'w-full h-10 flex flex-col justify-center items-center'}>

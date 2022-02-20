@@ -15,7 +15,7 @@ const Navbar: FunctionComponent = ({ }) => {
   return (
     <nav className={'bg-secondary relative'}>
       <div className={'w-full h-14 sm:h-12 flex items-center px-6'}>
-        <p className={'text-slate-50 font-hack font-semibold tracking-wide'}>
+        <p className={'text-slate-50 font-hack font-semibold tracking-wide uppercase'}>
           Diego Rodríguez
         </p>
         <div className={'hidden sm:flex ml-auto space-x-4'}>
