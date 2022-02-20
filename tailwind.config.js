@@ -14,6 +14,9 @@ module.exports = {
       fontFamily: {
         hack: ['Hack', ...defaultTheme.fontFamily.mono],
       },
+      fontSize: {
+        xxs: ['0.6rem', '0.8rem']
+      }
     },
   },
   plugins: [

@@ -39,6 +39,8 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects, }) => {
       'redux': 'SiRedux',
       'express': 'SiExpress',
       'webpack': 'SiWebpack',
+      'tailwind': 'SiTailwindcss',
+      'framer-motion': 'SiFramer',
     }
 
     return SiIcons[icons[tech]]
@@ -49,7 +51,7 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects, }) => {
       <div className={'w-full h-[38rem] sm:w-4/6 overflow-y-auto overflow-x-hidden flex flex-wrap px-2 sm:pl-0 scrollbar-thin scrollbar-thumb-slate-100 scrollbar-track-transparent scroll-smooth'}>
         {projects.map(({ name, description, languages, links, }, index) => (
           <m.div
-            className={'w-full h-[calc(100%/3-2*0.5rem)] sm:w-[calc(100%*1/3-2*0.5rem)] sm:mx-2 my-2 p-2 bg-secondary overflow-hidden rounded-md flex flex-col group relative border border-secondary hover:border-slate-400'}
+            className={'w-full h-[calc(100%/3-2*0.5rem)] sm:w-[calc(100%*1/2-2*0.5rem)] lg:w-[calc(100%*1/3-2*0.5rem)] sm:mx-2 my-2 p-2 bg-secondary overflow-hidden rounded-md flex flex-col group relative border border-secondary hover:border-slate-400'}
             key={index}
             custom={index}
             initial={'hidden'}
@@ -74,7 +76,7 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects, }) => {
             </div>
 
             <div className={'flex-1 w-full my-2 overflow-hidden'}>
-              <p className={'h-full w-full text-slate-100 font-hack text-xs'}>{description}</p>
+              <p className={'h-full w-full text-slate-100 font-hack text-xs sm:text-xxs md:text-xs'}>{description}</p>
             </div>
 
             <div className={'h-8 w-full'}>
@@ -88,12 +90,12 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects, }) => {
 
             <div className={'absolute top-full left-0 right-0 bottom-0 bg-secondary flex flex-col justify-center items-center overflow-hidden space-y-4 transition-all duration-200 ease-in-out group-hover:top-0'}>
               <div className={'w-full flex justify-center'}>
-                <p className={'h-full text-slate-100 text-lg font-hack'}>Where are we going?</p>
+                <p className={'h-full text-slate-100 text-lg sm:text-sm md:text-lg font-hack'}>Where are we going?</p>
               </div>
               <div className={'w-full flex justify-center space-x-3'}>
                 {links?.map(({ name, url, }, index) => (
                   <Link key={index} href={url} passHref={true}>
-                    <a className={'w-2/5 h-10 bg-slate-600 text-slate-100 font-hack text-sm flex justify-center items-center p-2 rounded-sm transition-all hover:shadow-md hover:shadow-slate-600 hover:-translate-y-0.5 active:-translate-y-[0.0625rem]'}>{name}</a>
+                    <a className={'w-2/5 h-10 bg-slate-600 text-slate-100 font-hack text-sm sm:text-xs flex justify-center items-center p-2 rounded-sm transition-all hover:shadow-md hover:shadow-slate-600 hover:-translate-y-0.5 active:-translate-y-[0.0625rem]'}>{name}</a>
                   </Link>
                 ))}
               </div>

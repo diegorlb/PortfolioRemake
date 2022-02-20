@@ -17,9 +17,9 @@ const Index: FunctionComponent = () => {
   return (
     <LayoutWrapper title={'Home'}>
       <div className={'sm:w-5/6 xl:w-4/6 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 px-3'}>
-        <div className={'h-40 w-full sm:h-64 sm:w-auto sm:aspect-square bg-slate-100 rounded-md'}></div>
+        <div className={'h-40 w-full sm:h-48 md:h-64 sm:w-auto sm:aspect-square bg-slate-100 rounded-md'}></div>
 
-        <p className={'sm:h-64 text-slate-50 font-hack font-normal sm:text-justify text-xl sm:text-base md:text-xl m-0 pl-2 relative sm:before:hidden before:border-l-2 before:absolute before:h-full before:left-0'}>
+        <p className={'sm:h-48 md:h-64 text-slate-100 font-hack text-lg sm:text-sm md:text-base lg:text-xl m-0 pl-2 relative sm:before:hidden before:border-l-2 before:absolute before:h-full before:left-0'}>
           <span className={'text-2xl font-bold'}>
             <Typewritter words={['Hello!', 'How are you?']} />
           </span><br />
