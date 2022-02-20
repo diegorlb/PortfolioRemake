@@ -2,7 +2,7 @@ import { FunctionComponent, useCallback, } from 'react'
 import { GetStaticProps, } from 'next'
 import Link from 'next/link'
 import * as SiIcons from 'react-icons/si'
-import { motion, } from 'framer-motion'
+import { m, } from 'framer-motion'
 import LayoutWrapper from '../components/LayoutWrapper'
 import getGithubData, { RepositoryType, } from '../utils/GithubUtils'
 
@@ -41,10 +41,10 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects, }) => {
   }, [])
 
   return (
-    <LayoutWrapper>
+    <LayoutWrapper title={'Projects'}>
       <div className={'w-full h-[38rem] sm:w-4/6 overflow-y-auto overflow-x-hidden flex flex-wrap px-2 sm:pl-0 scrollbar-thin scrollbar-thumb-slate-100 scrollbar-track-transparent scroll-smooth'}>
         {projects.map(({ name, description, languages, links, }, index) => (
-          <motion.div
+          <m.div
             className={'w-full h-[calc(100%/3-2*0.5rem)] sm:w-[calc(100%*1/3-2*0.5rem)] sm:mx-2 my-2 p-2 bg-secondary overflow-hidden rounded-md flex flex-col group relative border border-secondary hover:border-slate-400'}
             key={index}
             custom={index}
@@ -95,7 +95,7 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects, }) => {
               </div>
             </div>
 
-          </motion.div>
+          </m.div>
         ))}
       </div>
     </LayoutWrapper>

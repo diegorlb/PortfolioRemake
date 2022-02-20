@@ -15,14 +15,14 @@ const Navbar: FunctionComponent = ({ }) => {
   return (
     <nav className={'bg-secondary relative'}>
       <div className={'w-full h-14 sm:h-12 flex items-center px-6'}>
-        <p className={'text-slate-50 font-sans font-semibold tracking-wide'}>
+        <p className={'text-slate-50 font-hack font-semibold tracking-wide'}>
           Diego Rodríguez
         </p>
         <div className={'hidden sm:flex ml-auto space-x-4'}>
           {links.map(({ title, path, }, index) => (
             <div key={index}>
               <Link href={path} passHref={true}>
-                <a className={'text-slate-50 font-sans font-medium '}>{title}</a>
+                <a className={'text-slate-50 font-hack font-medium '}>{title}</a>
               </Link>
             </div>
           ))}
@@ -38,7 +38,7 @@ const Navbar: FunctionComponent = ({ }) => {
             {links.map(({ title, path, }, index) => (
               <div key={index} className={'w-20'}>
                 <Link href={path} passHref={true}>
-                  <a className={'text-slate-50 font-sans font-medium'}>{title}</a>
+                  <a className={'text-slate-50 font-hack font-medium'}>{title}</a>
                 </Link>
               </div>
             ))}

@@ -1,9 +1,18 @@
+import Head from 'next/head'
 import { FunctionComponent, } from 'react'
 import Navbar from '../Navbar'
 
-const LayoutWrapper: FunctionComponent = ({ children, }) => {
+type LayoutWrapperProps = {
+  title: string,
+}
+
+const LayoutWrapper: FunctionComponent<LayoutWrapperProps> = ({ title, children, }) => {
   return (
     <div className={'w-screen h-screen flex flex-col overflow-hidden'}>
+      <Head>
+        <title key={'title'}>{title} | Diego Rodríguez</title>
+      </Head>
+
       <Navbar />
 
       <main className={'bg-primary flex-1 flex justify-center items-center'}>

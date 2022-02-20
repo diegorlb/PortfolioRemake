@@ -1,26 +1,24 @@
 import { FunctionComponent, useMemo, useState, } from 'react'
-import { IconBaseProps, } from 'react-icons'
+import { HTMLMotionProps, m } from 'framer-motion'
 import * as SiIcons from 'react-icons/si'
 
 type HoverIconProps = {
   icon: keyof typeof SiIcons,
   accent: string,
-} & IconBaseProps
+  title: string,
+} & HTMLMotionProps<'div'>
 
-const HoverIcon: FunctionComponent<HoverIconProps> = ({ icon, accent, style, ...rest }) => {
+const HoverIcon: FunctionComponent<HoverIconProps> = ({ icon, accent, title, ...rest }) => {
   const [hover, setHover] = useState<boolean>(false)
 
   const Icon = useMemo(() => SiIcons[icon], [icon])
 
   return (
-    <Icon
-      {...rest}
-      style={{
-        ...style,
-        ...(hover ? { color: accent, } : {})
-      }}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)} />
+    <m.div {...rest} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <Icon
+        className={'w-8 h-8 m-1 text-slate-100 transition-colors'}
+        style={{ ...(hover ? { color: accent, } : {}), }} />
+    </m.div>
   )
 }
 

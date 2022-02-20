@@ -1,6 +1,6 @@
 import { FunctionComponent, } from 'react'
 import * as SiIcons from 'react-icons/si'
-import { motion, } from 'framer-motion'
+import { m, } from 'framer-motion'
 import LayoutWrapper from '../components/LayoutWrapper'
 import HoverIcon from '../components/HoverIcon'
 
@@ -50,10 +50,10 @@ const Skills: FunctionComponent = ({ }) => {
   }]
 
   return (
-    <LayoutWrapper>
+    <LayoutWrapper title={'Skills'}>
       <div className={'w-full h-[38rem] sm:w-1/2 flex flex-col justify-center space-y-4'}>
         {sections.map(({ title, icons, }, sectionIndex) => (
-          <motion.div
+          <m.div
             key={sectionIndex}
             className={'w-full h-32'}
             custom={sectionIndex}
@@ -69,28 +69,27 @@ const Skills: FunctionComponent = ({ }) => {
             }}>
             <p className={'text-slate-100 text-lg font-hack font-bold'}>{title}</p>
             <div className={'flex flex-wrap'}>
-              {icons.map(({ icon, name, color, }, badgeIndex) => {
-                return (
-                  <motion.div
-                    key={badgeIndex}
-                    className={'mr-3 last:mr-0 mb-2 hover:bg-slate-800 rounded-md'}
-                    custom={[sectionIndex, badgeIndex]}
-                    initial={'hidden'}
-                    animate={'visible'}
-                    variants={{
-                      visible: ([c, b]: number[]) => ({
-                        opacity: 1,
-                        x: 0,
-                        transition: { delay: (b + 1) * 0.05 + (c + 1) * 0.15, },
-                      }),
-                      hidden: { opacity: 0, x: 5, },
-                    }}>
-                    <HoverIcon title={name} icon={icon} accent={color} className={'w-8 h-8 m-1 text-slate-100 transition-colors'} />
-                  </motion.div>
-                );
-              })}
+              {icons.map(({ icon, name, color, }, badgeIndex) => (
+                <HoverIcon
+                  key={badgeIndex}
+                  icon={icon}
+                  accent={color}
+                  title={title}
+                  className={'mr-3 last:mr-0 mb-2 hover:bg-slate-800 rounded-md'}
+                  custom={[sectionIndex, badgeIndex]}
+                  initial={'hidden'}
+                  animate={'visible'}
+                  variants={{
+                    visible: ([c, b]: number[]) => ({
+                      opacity: 1,
+                      x: 0,
+                      transition: { delay: (b + 1) * 0.05 + (c + 1) * 0.15, },
+                    }),
+                    hidden: { opacity: 0, x: 5, },
+                  }} />
+              ))}
             </div>
-          </motion.div>
+          </m.div>
         ))}
       </div>
     </LayoutWrapper>
