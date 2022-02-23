@@ -41,6 +41,7 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects, }) => {
       'webpack': 'SiWebpack',
       'tailwind': 'SiTailwindcss',
       'framer-motion': 'SiFramer',
+      'font-awesome': 'SiFontawesome',
     }
 
     return SiIcons[icons[tech]]
