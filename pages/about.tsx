@@ -35,7 +35,7 @@ const About: FunctionComponent = ({ }) => {
 
   return (
     <LayoutWrapper title={'About'}>
-      <div className={'w-full h-[38rem] flex flex-col'}>
+      <div className={'w-full sm:w-1/2 h-[38rem] flex flex-col'}>
         {jobs.map((data, index) => (<JobSection key={index} index={index} {...data} />))}
       </div>
     </LayoutWrapper>
