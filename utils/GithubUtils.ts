@@ -40,7 +40,7 @@ const getGithubData = async (): Promise<Array<RepositoryType>> => {
     let languages: Array<string> = []
     if (isJSON(portfolio)) {
       const { tech, } = JSON.parse(portfolio) as { tech: Array<string>, }
-      languages = tech
+      languages = tech || []
     }
 
     const links = []

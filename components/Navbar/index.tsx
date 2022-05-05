@@ -21,7 +21,7 @@ const Navbar: FunctionComponent = ({ }) => {
           Diego Rodríguez
         </p>
         <p className={'flex sm:hidden text-slate-100 font-hack text-lg font-semibold tracking-wider uppercase'}>
-          DR
+          Diego RLB
         </p>
         <div className={'hidden sm:flex ml-auto space-x-4'}>
           {links.map((props, index) => (

@@ -5,6 +5,7 @@ import { m } from 'framer-motion'
 
 type LayoutWrapperProps = {
   title: string,
+  children: JSX.Element | Array<JSX.Element>,
 }
 
 const LayoutWrapper: FunctionComponent<LayoutWrapperProps> = ({ title, children, }) => {

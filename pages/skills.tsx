@@ -78,7 +78,7 @@ const Skills: FunctionComponent = ({ }) => {
                   icon={icon}
                   accent={color}
                   title={name}
-                  className={'mr-3 last:mr-0 mb-2 hover:bg-slate-800 rounded-md'}
+                  className={'mr-3 last:mr-0 mb-2 hover:bg-slate-800 rounded-md block'}
                   custom={[sectionIndex, badgeIndex]}
                   initial={'hidden'}
                   animate={'visible'}

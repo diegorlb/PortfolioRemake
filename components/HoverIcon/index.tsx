@@ -21,6 +21,7 @@ const HoverIcon: FunctionComponent<HoverIconProps> = ({ icon, accent, title, ...
       onMouseLeave={() => setHover(false)}>
       <Icon
         className={'w-8 h-8 m-1 text-slate-100 transition-colors'}
+        title={title}
         style={{ ...(hover ? { color: accent, } : {}), }} />
     </m.div>
   )
