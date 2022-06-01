@@ -9,8 +9,8 @@ const Typewritter = dynamic(() => import('../components/Typewritter'))
 
 const Index: FunctionComponent = () => {
   const icons: Array<{ label: string, title: string, icon: keyof typeof SiIcons, link: string }> = [
-    { label: 'LinkedIn page link', title: 'LinkedIn', icon: 'SiLinkedin', link: '', },
-    { label: 'Github page link', title: 'Github', icon: 'SiGithub', link: '', },
+    { label: 'LinkedIn page link', title: 'LinkedIn', icon: 'SiLinkedin', link: 'https://www.linkedin.com/in/diego-rodriguez-la-battaglia/', },
+    { label: 'Github page link', title: 'Github', icon: 'SiGithub', link: 'https://github.com/diegorlb/', },
     { label: 'Resumee link', title: 'Resumee', icon: 'SiAdobe', link: '', },
   ]
 
@@ -24,7 +24,7 @@ const Index: FunctionComponent = () => {
             <Typewritter words={['Hello!', 'How are you?']} />
           </span><br />
           My name is <strong>Diego Rodríguez</strong>,
-          I&apos;m a twenty years old, <em>Junior JavaScript &amp; TypeScript Developer</em>, based in Buenos Aires, Argentina.
+          I&apos;m a twenty years old, <em>JavaScript &amp; TypeScript Developer</em>, based in Buenos Aires, Argentina.
           I enjoy coding whatever idea crosses my mind, from <u>silly games</u> to actually <u>useful projects</u>.
           I plan on keep expanding my knowledge and understanding about programming.
         </p>
