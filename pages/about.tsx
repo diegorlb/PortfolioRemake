@@ -7,11 +7,11 @@ const JobSection = dynamic(() => import('../components/JobSection'))
 const About: FunctionComponent = ({ }) => {
   const jobs = [
     {
-      title: 'Javascript Developer',
-      company: 'Freelance',
-      from: 'December 2019',
+      title: 'Software Engineer',
+      company: 'GlobalLogic S.R.L.',
+      from: 'July 2022',
       to: 'Currently',
-      info: 'Work as a freelance Junior JavaScript Developer, focused mainly on BackEnd.',
+      info: 'Work as a JavaScript software engineer.',
     }, {
       title: 'Software Developer & E-Commerce support',
       company: 'Giovalma Bazar',
@@ -35,7 +35,7 @@ const About: FunctionComponent = ({ }) => {
 
   return (
     <LayoutWrapper title={'About'}>
-      <div className={'w-full sm:w-1/2 h-[38rem] flex flex-col'}>
+      <div className={'w-full sm:w-1/2 h-[32rem] flex flex-col'}>
         {jobs.map((data, index) => (<JobSection key={index} index={index} {...data} />))}
       </div>
     </LayoutWrapper>

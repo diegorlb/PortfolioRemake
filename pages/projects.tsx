@@ -49,7 +49,7 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects, }) => {
 
   return (
     <LayoutWrapper title={'Projects'}>
-      <div className={'w-full h-[38rem] sm:w-4/6 overflow-y-auto overflow-x-hidden flex flex-wrap px-2 sm:pl-0 scrollbar-thin scrollbar-thumb-slate-100 scrollbar-track-transparent scroll-smooth'}>
+      <div className={'w-full h-[32rem] sm:w-4/6 overflow-y-auto overflow-x-hidden flex flex-wrap px-2 sm:pl-0 scrollbar-thin scrollbar-thumb-slate-100 scrollbar-track-transparent scroll-smooth'}>
         {projects.map(({ name, description, languages, links, }, index) => (
           <m.div
             className={'w-full h-[calc(100%/3-2*0.5rem)] sm:w-[calc(100%*1/2-2*0.5rem)] lg:w-[calc(100%*1/3-2*0.5rem)] sm:mx-2 my-2 p-2 bg-secondary overflow-hidden rounded-md flex flex-col group relative border border-secondary hover:border-slate-400'}

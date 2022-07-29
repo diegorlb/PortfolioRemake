@@ -1,6 +1,7 @@
 import { FunctionComponent, } from 'react'
 import Head from 'next/head'
 import Navbar from '../Navbar'
+import Footer from '../Footer'
 import { m } from 'framer-motion'
 
 type LayoutWrapperProps = {
@@ -12,7 +13,7 @@ const LayoutWrapper: FunctionComponent<LayoutWrapperProps> = ({ title, children,
   return (
     <div className={'w-screen bg-primary h-screen flex flex-col overflow-hidden'}>
       <Head>
-        <title key={'title'}>{title} | Diego Rodríguez</title>
+        <title key={'title'}>{`${title} | Diego Rodríguez`}</title>
       </Head>
 
       <Navbar />
@@ -30,15 +31,7 @@ const LayoutWrapper: FunctionComponent<LayoutWrapperProps> = ({ title, children,
         {children}
       </m.main>
 
-      <footer className={'bg-secondary'}>
-        <div className={'w-full h-10 flex flex-col justify-center items-center'}>
-          {['Made with lots of <3', '© 2022'].map((text, index) => (
-            <p key={index} className={'text-slate-50/75 font-sans text-xs'}>
-              {text}
-            </p>
-          ))}
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

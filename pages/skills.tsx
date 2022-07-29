@@ -54,7 +54,7 @@ const Skills: FunctionComponent = ({ }) => {
 
   return (
     <LayoutWrapper title={'Skills'}>
-      <div className={'w-full h-[38rem] sm:w-1/2 flex flex-col justify-center space-y-4'}>
+      <div className={'w-full h-[32rem] sm:w-1/2 flex flex-col justify-center space-y-4'}>
         {sections.map(({ title, icons, }, sectionIndex) => (
           <m.div
             key={sectionIndex}
