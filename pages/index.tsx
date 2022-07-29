@@ -15,7 +15,12 @@ const Index: FunctionComponent = () => {
   ]
 
   return (
-    <LayoutWrapper title={'Home'}>
+    <LayoutWrapper
+      title={'Home'}
+      og={{
+        title: 'Wellcome to Diego\'s portfolio',
+        description: 'JavaScript & TypeScript enthusiastic, with a profound love for mathematics & physics.',
+      }}>
       <div className={'sm:w-5/6 xl:w-4/6 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 px-3'}>
         <div className={'h-40 w-full sm:h-48 md:h-64 sm:w-auto sm:aspect-square bg-slate-100 rounded-md'}></div>
 

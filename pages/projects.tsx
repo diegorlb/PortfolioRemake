@@ -48,7 +48,12 @@ const Projects: FunctionComponent<ProjectsProps> = ({ projects, }) => {
   }, [])
 
   return (
-    <LayoutWrapper title={'Projects'}>
+    <LayoutWrapper
+      title={'Projects'}
+      og={{
+        title: 'Wellcome to my projects',
+        description: 'Projects that I have worked on or that I am currently working on.',
+      }}>
       <div className={'w-full h-[32rem] sm:w-4/6 overflow-y-auto overflow-x-hidden flex flex-wrap px-2 sm:pl-0 scrollbar-thin scrollbar-thumb-slate-100 scrollbar-track-transparent scroll-smooth'}>
         {projects.map(({ name, description, languages, links, }, index) => (
           <m.div

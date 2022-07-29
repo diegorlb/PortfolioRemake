@@ -6,14 +6,26 @@ import { m } from 'framer-motion'
 
 type LayoutWrapperProps = {
   title: string,
+  og: {
+    title: string,
+    description: string,
+  }
   children: JSX.Element | Array<JSX.Element>,
 }
 
-const LayoutWrapper: FunctionComponent<LayoutWrapperProps> = ({ title, children, }) => {
+const LayoutWrapper: FunctionComponent<LayoutWrapperProps> = ({ title, og, children, }) => {
   return (
     <div className={'w-screen bg-primary h-screen flex flex-col overflow-hidden'}>
       <Head>
         <title key={'title'}>{`${title} | Diego Rodríguez`}</title>
+
+        <meta property={'og:title'} content={og['title']} />
+        <meta property={'og:type'} content={'website'} />
+        <meta property={'og:url'} content={'https://diegorlb.com.ar/'} />
+        <meta property={'og:image'} content={'https://diegorlb.com.ar/icons/favicon.ico'} />
+        <meta property={'og:description'} content={og['description']} />
+        <meta property={'og:site_name'} content={`${title} | Diego Rodríguez`} />
+        <meta property={'og:locale'} content={'en_US'} />
       </Head>
 
       <Navbar />

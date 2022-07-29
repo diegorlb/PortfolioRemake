@@ -53,7 +53,12 @@ const Skills: FunctionComponent = ({ }) => {
   }]
 
   return (
-    <LayoutWrapper title={'Skills'}>
+    <LayoutWrapper
+      title={'Skills'}
+      og={{
+        title: 'Skills',
+        description: 'Skills I have learnt and skills I am currently learning.',
+      }}>
       <div className={'w-full h-[32rem] sm:w-1/2 flex flex-col justify-center space-y-4'}>
         {sections.map(({ title, icons, }, sectionIndex) => (
           <m.div
